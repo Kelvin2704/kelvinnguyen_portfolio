@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div className="flex flex-col justify-center rounded-xl border h-full p-5 space-y-2 bg-neutral-800 overflow-hidden">
+    <div className="flex flex-col justify-center rounded-xl border h-[60vh] lg:h-full p-2 md:p-5 space-y-2 bg-neutral-800 overflow-hidden">
       <h1 className="text-lg text-neutral-50 font-custom font-bold">
         Your Ideas? <br />
         My Frontend Expertise <br />

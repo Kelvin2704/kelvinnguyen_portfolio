@@ -38,24 +38,27 @@ const Projects = () => {
     );
   };
   return (
-    <div className="bg-neutral-800 rounded-xl border text-neutral-50 px-2 py-5 xl:p-5 flex flex-col space-y-2 h-full">
-      <h1 className="w-full text-3xl text-green-500 font-custom font-black">
+    <div className="bg-neutral-800 rounded-xl border text-neutral-50 px-2 py-5 xl:p-5 flex flex-col justify-center items-center space-y-2 h-full">
+      <h1 className="w-full text-3xl text-center text-green-500 font-custom font-black">
         My Projects
       </h1>
-
-      <img
-        className="rounded-xl w-full aspect-video drop-shadow-xl"
-        src={cards[currentIndex].image}
-        alt=""
-      />
+      <div className="">
+        <img
+          className="rounded-xl w-full aspect-video drop-shadow-xl"
+          src={cards[currentIndex].image}
+          alt=""
+        />
+      </div>
 
       <div className="space-y-3">
         <h1 className="text-4xl font-custom font-bold">
           {cards[currentIndex].title}
         </h1>
-        <div className="">
-          <p className="text-neutral-50 text-sm">{cards[currentIndex].desc}</p>
-        </div>
+
+        <p className="text-neutral-50 text-sm line-clamp-4">
+          {cards[currentIndex].desc}
+        </p>
+
         <div className="flex flex-wrap gap-1 transition-all">
           {cards[currentIndex].technologies.map((tech, index) => (
             <div className="p-2 text-sm border rounded-xl" key={index}>
@@ -68,8 +71,8 @@ const Projects = () => {
             <div className="size-10 rounded-xl flex items-center justify-center bg-neutral-950 ">
               <FiGithub />
             </div>
-            <div className="h-10 w-fit p-2 bg-neutral-950 rounded-xl flex items-center justify-center gap-1 ">
-              Live Preview <FaPlay />
+            <div className="size-10 bg-neutral-950 rounded-xl flex items-center justify-center gap-1 ">
+              <FaPlay />
             </div>
           </div>
           <div className="flex gap-2">

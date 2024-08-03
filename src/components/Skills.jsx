@@ -40,9 +40,9 @@ const SkillItem = () => {
     },
   ];
   return (
-    <div className="w-full h-full bg-neutral-800 overflow-hidden p-5 space-y-2 border rounded-xl">
-      <h1 className="text-3xl text-green-500 font-custom font-black">
-        What can I do for?
+    <div className="w-full h-[60vh] flex flex-col justify-center items-center md:h-[50vh] lg:h-full bg-neutral-800 overflow-hidden p-2 md:p-5 space-y-2 border rounded-xl">
+      <h1 className="text-4xl text-green-500 font-custom font-black">
+        Some of my skills
       </h1>
       <div className="grid grid-cols-2 gap-5">
         {skills.map((skill, index) => (

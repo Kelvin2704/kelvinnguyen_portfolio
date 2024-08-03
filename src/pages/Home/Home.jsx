@@ -20,12 +20,12 @@ const Home = () => {
       {/* <Project />
       <Skills />
       <Contact /> */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-4 w-full h-full lg:h-screen container p-3 lg:p-5 m-auto bg-black gap-2">
+      <div className="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-4 w-full h-full lg:h-screen container p-2 lg:p-5 m-auto bg-black gap-2">
         <div className="order-4 col-span-2 lg:order-1 lg:col-span-1 row-span-2 lg:row-span-3">
           <Projects />
         </div>
 
-        <div className="order-2 lg:order-2 col-span-2">
+        <div className="order-2 lg:order-2 col-span-2 h-[30vh] lg:h-full">
           <div className="grid grid-cols-2 gap-2 h-full">
             <GridItem
               number={"20"}

@@ -13,7 +13,7 @@ const AboutDemo = () => {
     loop: 3,
   });
   return (
-    <div className="relative flex flex-col items-center justify-center bg-neutral-900 w-full h-[70vh] lg:h-full p-3 overflow-hidden rounded-xl border">
+    <div className="relative flex flex-col items-center justify-center bg-neutral-900 w-full h-[90vh] lg:h-full p-3 overflow-hidden rounded-xl border">
       {/* content */}
       <div className="about-wrapper w-full h-full flex flex-col z-30">
         {/* buttons available */}
@@ -44,9 +44,9 @@ const AboutDemo = () => {
               />
             </div>
             <div className="about-heading font-custom text-center font-black ">
-              <p className="text-xl md:text-3xl lg:text-xl">Hello!</p>
+              {/*  */}
               <h1 className="text-2xl md:text-5xl lg:text-4xl">
-                I'm{" "}
+                Hello, I'm{" "}
                 <span className="text-green-500">
                   {headline}
                   <Cursor cursorColor="black" />
@@ -94,8 +94,9 @@ const AboutDemo = () => {
       </div>
 
       {/* <div class="absolute inset-0 z-20 bg-fuchsia-400 bg-[size:20px_20px] opacity-20 blur-[100px]"></div> */}
-
-      <div class="absolute inset-0 z-20 h-full w-full bg-transparent bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+      <div className="overflow-hidden">
+        <div class="absolute inset-0 z-20 h-full w-full bg-transparent bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+      </div>
     </div>
   );
 };
