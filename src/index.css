@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Pangram-Regular";
+  src: url("./fonts/Pangram-Regular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Pangram-Regular";
+  src: url("./fonts/Pangram-Medium.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pangram-Regular";
+  src: url("./fonts/Pangram-Bold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pangram-Regular";
+  src: url("./fonts/Pangram-Black.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Apply the custom font globally */
+body {
+  font-family: "Pangram-Regular", sans-serif;
+  background: white;
+  color: #0a0a0a;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+@keyframes moveDot {
+  0% {
+    top: 5px;
+    opacity: 1;
+  }
+  100% {
+    top: 20px; /* Subtract the dot's height */
+    opacity: 0.2;
+  }
+}
+
+.animate-moveDot {
+  animation: moveDot 1.5s linear infinite;
 }
