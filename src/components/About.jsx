@@ -7,7 +7,7 @@ import { FiGithub } from "react-icons/fi";
 
 const AboutDemo = () => {
   const [headline] = useTypewriter({
-    words: ["Kelvin Nguyen.", "a Front-End Developer."],
+    words: ["Kelvin Nguyen", "a Frontend Developer."],
     typeSpeed: 100,
     delaySpeed: 1000,
     loop: 3,
@@ -27,8 +27,8 @@ const AboutDemo = () => {
           </div>
           <div className="flex items-center justify-center gap-2">
             Resume{" "}
-            <div className="border bg-neutral-900 size-10 flex justify-center items-center rounded-xl ">
-              <FaDownload color="white" />
+            <div className="border bg-neutral-100/50 size-10 flex justify-center items-center rounded-xl  ">
+              <FaDownload className="animate-bounce" color="white" />
             </div>
           </div>
         </div>
@@ -36,51 +36,32 @@ const AboutDemo = () => {
         {/* content */}
         <div className="w-full h-full flex flex-col justify-center items-center text-neutral-50">
           <div className="flex flex-col justify-center items-center gap-2">
-            <div className="size-32 md:size-48 lg:size-32">
+            <div className="size-32 md:size-48">
               <img
                 className="rounded-full w-full h-full object-cover shadow-2xl"
                 src={profile}
                 alt=""
               />
             </div>
-            <div className="about-heading font-custom text-center font-black ">
+            <div className="about-heading font-custom text-center ">
               {/*  */}
-              <h1 className="text-2xl md:text-5xl lg:text-4xl">
-                Hello, I'm{" "}
-                <span className="text-green-500">
+              Hello!
+              <h1 className="text-2xl md:text-5xl lg:text-4xl font-black">
+                I'm{" "}
+                <span className="text-green-500 text-5xl bg-clip-text text-transparent text-[5rem] bg-gradient-to-r from-green-500 to-cyan-400">
                   {headline}
                   <Cursor cursorColor="black" />
                 </span>
               </h1>
             </div>
-            <div className="about-overview w-full md:w-4/5 h-full">
+            <div className="about-overview w-full md:w-4/5 h-full text-neutral-300/80 text-lg text-center ">
               <p>
-                I have passion for building attractive and{" "}
-                <span className="text-blue-500 font-custom font-black">
-                  user-friendly
+                I love to build{" "}
+                <span className="text-neutral-50 font-custom font-black">
+                  attractive, user-friendly, fast and responsive 
                 </span>{" "}
-                websites. I use modern technologies to create fast and{" "}
-                <span className="text-orange-500 font-custom font-black">
-                  responsive designs
-                </span>{" "}
-                that enhance the user experience.
+                websites that enhance the user experience.
               </p>
-            </div>
-          </div>
-        </div>
-        {/* social */}
-        <div className="w-full flex justify-between items-center text-sm font-custom font-bold">
-          <div className="links flex flex-row items-center justify-center gap-1 p-2 rounded-xl bg-neutral-50 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30">
-            <div className="size-8 md:size-10 lg:size-8 rounded-xl border flex items-center justify-center bg-neutral-50">
-              <FiGithub />
-            </div>
-            <div className="size-8 md:size-10 lg:size-8 rounded-xl border flex items-center justify-center bg-neutral-50">
-              <FaLinkedinIn />
-            </div>
-          </div>
-          <div className="">
-            <div className="size-8 md:size-10 lg:size-8 rounded-full border flex items-center justify-center bg-neutral-50 hover:animate-spin">
-              <FaPlus />
             </div>
           </div>
         </div>
@@ -94,9 +75,8 @@ const AboutDemo = () => {
       </div>
 
       {/* <div class="absolute inset-0 z-20 bg-fuchsia-400 bg-[size:20px_20px] opacity-20 blur-[100px]"></div> */}
-      <div className="overflow-hidden">
-        <div class="absolute inset-0 z-20 h-full w-full bg-transparent bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-      </div>
+
+      <div class="absolute inset-0 z-20 h-full w-full bg-transparent bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
     </div>
   );
 };

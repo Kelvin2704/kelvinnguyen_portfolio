@@ -4,7 +4,7 @@ import cineverse from "../assets/cineverse_thumbnail.png";
 import weatherapp from "../assets/weather app.png";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
-import { FaLinkedinIn, FaPlay } from "react-icons/fa6";
+import { FaLaptopCode, FaLinkedinIn, FaPlay } from "react-icons/fa6";
 const cards = [
   {
     title: "Cineverse",
@@ -38,30 +38,32 @@ const Projects = () => {
     );
   };
   return (
-    <div className="bg-neutral-800 rounded-xl border text-neutral-50 px-2 py-5 xl:p-5 flex flex-col justify-center items-center space-y-2 h-full">
-      <h1 className="w-full text-3xl text-center text-green-500 font-custom font-black">
-        My Projects
+    <div className="bg-neutral-800 rounded-xl border text-neutral-50 px-2 py-5 xl:p-5 flex flex-col  space-y-2 h-full">
+      <h1 className="flex justify-center items-center text-neutral-100/50 gap-1">
+        <FaLaptopCode color="#22c55e " /> Projects{" "}
       </h1>
-      <div className="">
+
+      <div className="h-2/5 w-full">
         <img
-          className="rounded-xl w-full aspect-video drop-shadow-xl"
+          className="rounded-xl object-cover object-center w-full h-full aspect-video drop-shadow-xl"
           src={cards[currentIndex].image}
           alt=""
         />
       </div>
 
-      <div className="space-y-3">
-        <h1 className="text-4xl font-custom font-bold">
-          {cards[currentIndex].title}
-        </h1>
+      <div className="space-y-2">
+        <h1 className="text-xl font-bold ">{cards[currentIndex].title}</h1>
 
-        <p className="text-neutral-50 text-sm line-clamp-4">
+        <p className="text-neutral-50 line-clamp-2">
           {cards[currentIndex].desc}
         </p>
 
         <div className="flex flex-wrap gap-1 transition-all">
           {cards[currentIndex].technologies.map((tech, index) => (
-            <div className="p-2 text-sm border rounded-xl" key={index}>
+            <div
+              className="p-2 bg-neutral-100/10 text-sm rounded-xl"
+              key={index}
+            >
               {tech}
             </div>
           ))}

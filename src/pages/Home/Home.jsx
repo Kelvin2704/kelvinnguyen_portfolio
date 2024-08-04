@@ -10,8 +10,9 @@ import { FaStar } from "react-icons/fa";
 
 import ContactForm from "../../components/Contact";
 import SkillItem from "../../components/Skills";
-import { FaFlag } from "react-icons/fa6";
+import { FaFlag, FaLinkedinIn, FaPlus } from "react-icons/fa6";
 import Projects from "../../components/Projects";
+import Social from "../../components/Social";
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
       <Skills />
       <Contact /> */}
       <div className="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-4 w-full h-full lg:h-screen container p-2 lg:p-5 m-auto bg-black gap-2">
-        <div className="order-4 col-span-2 lg:order-1 lg:col-span-1 row-span-2 lg:row-span-3">
+        <div className="order-4 col-span-2 lg:order-1 lg:col-span-1 row-span-2 lg:row-span-2">
           <Projects />
         </div>
 
@@ -45,22 +46,15 @@ const Home = () => {
         </div>
 
         {/* about */}
-        <div className="order-1 col-span-2 lg:order-4 lg:col-span-2 lg:row-span-2 ">
+        <div className="order-1 col-span-2 lg:order-4 lg:col-span-2 lg:row-span-3 ">
           <AboutDemo />
         </div>
+        <div className="order-5 col-span-2 lg:col-span-1 lg:row-span-2 lg:order-6 bg-neutral-800 rounded-xl h-full border">
+          <Social />
+        </div>
         {/* skills */}
-        <div className="order-3 col-span-2 lg:order-5 lg:row-span-2 lg:col-span-1">
+        <div className="order-3 col-span-2 lg:order-5  lg:col-span-1 lg:row-span-2">
           <SkillItem />
-        </div>
-
-        <div className="order-5 col-span-2 lg:order-6 lg:col-span-1 bg-neutral-50 rounded-xl lg:h-full">
-          7
-        </div>
-        <div className="order-6 col-span-2 lg:order-7 lg:col-span-1 bg-neutral-50 rounded-xl lg:h-full">
-          8
-        </div>
-        <div className="order-7 col-span-2 lg:order-8 lg:col-span-1 bg-neutral-50 rounded-xl lg:h-full">
-          9
         </div>
       </div>
     </>

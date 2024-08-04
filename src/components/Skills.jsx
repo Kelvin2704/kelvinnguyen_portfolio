@@ -40,7 +40,7 @@ const SkillItem = () => {
     },
   ];
   return (
-    <div className="w-full h-[60vh] flex flex-col justify-center items-center md:h-[50vh] lg:h-full bg-neutral-800 overflow-hidden p-2 md:p-5 space-y-2 border rounded-xl">
+    <div className="w-full flex flex-col md:h-[50vh] lg:h-full bg-neutral-800 overflow-hidden py-10 px-2 md:p-5 space-y-2 border rounded-xl">
       <h1 className="text-4xl text-green-500 font-custom font-black">
         Some of my skills
       </h1>
