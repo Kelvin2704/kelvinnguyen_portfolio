@@ -5,6 +5,7 @@ import weatherapp from "../assets/weather app.png";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import { FaLaptopCode, FaLinkedinIn, FaPlay } from "react-icons/fa6";
+import Heading from "./Heading";
 const cards = [
   {
     title: "Cineverse",
@@ -38,62 +39,64 @@ const Projects = () => {
     );
   };
   return (
-    <div className="bg-neutral-800 rounded-xl border text-neutral-50 px-2 py-5 xl:p-5 flex flex-col  space-y-2 h-full">
-      <h1 className="flex justify-center items-center text-neutral-100/50 gap-1">
-        <FaLaptopCode color="#22c55e " /> Projects{" "}
-      </h1>
-
-      <div className="h-2/5 w-full">
-        <img
-          className="rounded-xl object-cover object-center w-full h-full aspect-video drop-shadow-xl"
-          src={cards[currentIndex].image}
-          alt=""
+    <div className="order-4 col-span-2 lg:order-1 lg:col-span-1 row-span-2 lg:row-span-3">
+      <div className="bg-neutral-800 rounded-xl border-2 border-neutral-200/20 text-neutral-50 px-2 py-5 xl:p-5 flex flex-col  space-y-2 h-full">
+        <Heading
+          text={"Personal projects"}
+          icon={<FaLaptopCode color="#22c55e" />}
         />
-      </div>
-
-      <div className="space-y-2">
-        <h1 className="text-xl font-bold ">{cards[currentIndex].title}</h1>
-
-        <p className="text-neutral-50 line-clamp-2">
-          {cards[currentIndex].desc}
-        </p>
-
-        <div className="flex flex-wrap gap-1 transition-all">
-          {cards[currentIndex].technologies.map((tech, index) => (
-            <div
-              className="p-2 bg-neutral-100/10 text-sm rounded-xl"
-              key={index}
-            >
-              {tech}
-            </div>
-          ))}
+        <div className="h-3/5 lg:h-2/5 w-full">
+          <img
+            className="rounded-xl object-cover object-center w-full h-full aspect-video drop-shadow-xl"
+            src={cards[currentIndex].image}
+            alt=""
+          />
         </div>
-        <div className="w-full flex justify-between items-center">
-          <div className="flex gap-2">
-            <div className="size-10 rounded-xl flex items-center justify-center bg-neutral-950 ">
-              <FiGithub />
+
+        <div className="space-y-2">
+          <h1 className="text-xl font-bold ">{cards[currentIndex].title}</h1>
+
+          <p className="text-neutral-100/50 text-sm line-clamp-4">
+            {cards[currentIndex].desc}
+          </p>
+
+          <div className="flex flex-wrap gap-1 transition-all">
+            {cards[currentIndex].technologies.map((tech, index) => (
+              <div
+                className="p-2 bg-neutral-100/10 text-sm rounded-xl"
+                key={index}
+              >
+                {tech}
+              </div>
+            ))}
+          </div>
+          <div className="w-full flex justify-between items-center">
+            <div className="flex gap-2">
+              <div className="size-10 rounded-xl flex items-center justify-center bg-neutral-950 ">
+                <FiGithub />
+              </div>
+              <div className="size-10 bg-neutral-950 rounded-xl flex items-center justify-center gap-1 ">
+                <FaPlay />
+              </div>
             </div>
-            <div className="size-10 bg-neutral-950 rounded-xl flex items-center justify-center gap-1 ">
-              <FaPlay />
+            <div className="flex gap-2">
+              <button
+                onClick={prevProject}
+                className="size-10 flex justify-center items-center bg-green-500 rounded-xl"
+              >
+                <MdArrowBackIos />
+              </button>
+              <button
+                onClick={nextProject}
+                className="size-10 flex justify-center items-center bg-green-500 rounded-xl"
+              >
+                <MdArrowForwardIos />
+              </button>
             </div>
           </div>
-          <div className="flex gap-2">
-            <button
-              onClick={prevProject}
-              className="size-10 flex justify-center items-center bg-green-500 rounded-xl"
-            >
-              <MdArrowBackIos />
-            </button>
-            <button
-              onClick={nextProject}
-              className="size-10 flex justify-center items-center bg-green-500 rounded-xl"
-            >
-              <MdArrowForwardIos />
-            </button>
-          </div>
         </div>
+        {/* navigate buttons */}
       </div>
-      {/* navigate buttons */}
     </div>
   );
 };
