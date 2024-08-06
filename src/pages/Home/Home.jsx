@@ -8,8 +8,8 @@ import Experiences from "../../components/Experiences";
 
 const Home = () => {
   return (
-    <>
-      <div className="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-5 w-full h-full lg:h-screen container p-2 lg:p-5 m-auto bg-black gap-2">
+    <div className="bg-neutral-950">
+      <div className="grid grid-cols-2 lg:grid-cols-4  w-full h-full xl:h-screen container p-2 lg:p-5 m-auto gap-2">
         <AboutDemo />
         <Experiences />
         <Projects />
@@ -17,7 +17,7 @@ const Home = () => {
         <Social />
         <SkillItem />
       </div>
-    </>
+    </div>
   );
 };
 

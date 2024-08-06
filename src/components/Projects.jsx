@@ -39,8 +39,8 @@ const Projects = () => {
     );
   };
   return (
-    <div className="order-4 col-span-2 lg:order-1 lg:col-span-1 row-span-2 lg:row-span-3">
-      <div className="bg-neutral-800 rounded-xl border-2 border-neutral-200/20 text-neutral-50 px-2 py-5 xl:p-5 flex flex-col  space-y-2 h-full">
+    <div className="order-4 col-span-2 row-span-2 md:order-5 xl:order-1 lg:col-span-2 lg:row-span-2 xl:col-span-1 xl:row-span-3">
+      <div className="bg-neutral-800 rounded-xl border-2 border-neutral-200/20 text-neutral-50 px-2 py-5 md:p-10 xl:p-2 flex flex-col space-y-4 h-full">
         <Heading
           text={"Personal projects"}
           icon={<FaLaptopCode color="#22c55e" />}
@@ -53,17 +53,17 @@ const Projects = () => {
           />
         </div>
 
-        <div className="space-y-2">
-          <h1 className="text-xl font-bold ">{cards[currentIndex].title}</h1>
+        <div className="space-y-2 md:space-y-3 xl:space-y-2">
+          <h1 className="text-xl md:text-3xl xl:text-2xl font-bold ">{cards[currentIndex].title}</h1>
 
-          <p className="text-neutral-100/50 text-sm line-clamp-4">
+          <p className="text-neutral-100/50 text-sm md:text-lg xl:text-sm line-clamp-4 xl:line-clamp-3">
             {cards[currentIndex].desc}
           </p>
 
-          <div className="flex flex-wrap gap-1 transition-all">
+          <div className="flex flex-wrap gap-1 md:gap-2 transition-all">
             {cards[currentIndex].technologies.map((tech, index) => (
               <div
-                className="p-2 bg-neutral-100/10 text-sm rounded-xl"
+                className="p-2 bg-neutral-100/10 text-sm md:text-lg xl:text-sm rounded-xl"
                 key={index}
               >
                 {tech}
@@ -71,24 +71,24 @@ const Projects = () => {
             ))}
           </div>
           <div className="w-full flex justify-between items-center">
-            <div className="flex gap-2">
-              <div className="size-10 rounded-xl flex items-center justify-center bg-neutral-950 ">
+            <div className="flex space-x-1">
+              <span className="size-10 md:size-12 xl:size-10 rounded-xl flex items-center justify-center bg-neutral-950 ">
                 <FiGithub />
-              </div>
-              <div className="size-10 bg-neutral-950 rounded-xl flex items-center justify-center gap-1 ">
+              </span>
+              <span className="size-10 md:size-12 xl:size-10 bg-neutral-950 rounded-xl flex items-center justify-center gap-1 ">
                 <FaPlay />
-              </div>
+              </span>
             </div>
-            <div className="flex gap-2">
+            <div className="flex space-x-1">
               <button
                 onClick={prevProject}
-                className="size-10 flex justify-center items-center bg-green-500 rounded-xl"
+                className="size-10 md:size-12 xl:size-10 flex justify-center items-center bg-green-500 rounded-xl"
               >
                 <MdArrowBackIos />
               </button>
               <button
                 onClick={nextProject}
-                className="size-10 flex justify-center items-center bg-green-500 rounded-xl"
+                className="size-10 md:size-12 xl:size-10 flex justify-center items-center bg-green-500 rounded-xl"
               >
                 <MdArrowForwardIos />
               </button>

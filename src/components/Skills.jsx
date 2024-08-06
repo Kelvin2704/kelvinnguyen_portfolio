@@ -42,15 +42,21 @@ const SkillItem = () => {
     },
   ];
   return (
-    <div className="order-3 col-span-2 lg:order-5  lg:col-span-1 lg:row-span-2">
-      <div className="w-full flex flex-col md:h-[50vh] lg:h-full bg-neutral-800 overflow-hidden py-10 px-2 md:p-5 space-y-2 border-2 border-neutral-200/20 rounded-xl">
-      <Heading text={"What I can do"} icon={<IoIosRocket color="#22c55e"/>}/>
-        <div className="grid grid-cols-2 gap-5">
+    <div className="order-3 col-span-2 md:col-span-1  lg:col-span-2 lg:row-span-1 xl:order-4 xl:col-span-1 xl:row-span-2">
+      <div className="w-full flex flex-col h-full bg-neutral-800 overflow-hidden py-5 px-2 md:p-10 xl:p-5 space-y-4 border-2 border-neutral-200/20 rounded-xl">
+        <Heading
+          text={"What I can do"}
+          icon={<IoIosRocket color="#22c55e" />}
+        />
+        <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-5 md:gap-2 xl:gap-5 ">
           {skills.map((skill, index) => (
-            <div className="space-y-2" key={index}>
-              <h2 className="font-custom font-bold text-neutral-50">
-                {skill.title}
-              </h2>
+            <div className="space-y-2 w-full h-full text-wrap" key={index}>
+              <div className="text-wrap">
+                <h2 className="font-bold text-neutral-50 text-base md:text-lg xl:text-base">
+                  {skill.title}
+                  
+                </h2>
+              </div>
               <ul className="flex flex-wrap gap-1 w-full">
                 {skill.icons.map((icon, i) => (
                   <li

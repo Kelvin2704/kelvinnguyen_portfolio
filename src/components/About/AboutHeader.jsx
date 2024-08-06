@@ -3,7 +3,7 @@ import { FaDownload } from "react-icons/fa6";
 
 const AboutHeader = () => {
   return (
-    <div className="w-full flex justify-between items-center text-sm font-custom font-bold text-neutral-50">
+    <div className="w-full flex justify-between items-center text-sm lg:text-base font-custom font-bold text-neutral-50">
       <div className="flex items-center justify-center border-2 border-neutral-200/20 rounded-2xl gap-2 p-2  bg-neutral-700">
         <span class="relative flex size-3">
           <span class="animate-ping absolute inline-flex size-3 rounded-full bg-green-400 opacity-75"></span>

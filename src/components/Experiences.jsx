@@ -4,7 +4,7 @@ import { FaFlag, FaStar } from 'react-icons/fa6'
 
 const Experiences = () => {
   return (
-    <div className="order-2 col-span-2 h-full">
+    <div className="order-2 col-span-2  xl:row-span-2 h-full">
           <div className="grid grid-cols-2 gap-2 h-full">
             <GridItem
               number={"20"}

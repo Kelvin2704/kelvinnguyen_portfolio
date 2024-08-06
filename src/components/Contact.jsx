@@ -3,9 +3,9 @@ import { SiMinutemailer } from "react-icons/si";
 
 const ContactForm = () => {
   return (
-    <div className="order-8 col-span-2 lg:order-3 lg:row-span-3 lg:col-span-1">
-      <div className="flex flex-col rounded-xl border-2 border-neutral-200/20 lg:h-full py-10 p-2 md:p-5 space-y-3 bg-neutral-800 overflow-hidden">
-        <h1 className="text-neutral-100">
+    <div className="order-8 col-span-2 lg:order-7 xl:order-3 lg:col-span-2 xl:col-span-1 xl:row-span-3 ">
+      <div className="flex flex-col rounded-xl border-2 border-neutral-200/20 lg:h-full py-5 p-2 md:p-10 xl:p-5 space-y-4 bg-neutral-800 overflow-hidden">
+        <h1 className="text-neutral-100 md:text-lg">
           You have ideas ? <br />
           I have skills <br />
           <span className="text-4xl font-black w-full text-green-500">
@@ -39,7 +39,7 @@ const ContactForm = () => {
 
           <button
             type="submit"
-            className="p-3 font-bold bg-green-500 hover:bg-green-400 text-neutral-50 rounded-xl flex items-center justify-center gap-2 transition-all"
+            className="p-3 md:text-lg font-bold bg-green-500 hover:bg-green-400 text-neutral-50 rounded-xl flex items-center justify-center gap-2 transition-all"
           >
             <SiMinutemailer className="size-5 text-neutral-50" /> Email me
           </button>
