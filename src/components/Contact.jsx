@@ -2,6 +2,8 @@ import { SiMinutemailer } from "react-icons/si";
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
+import Heading from "./Heading";
+import { FaHandshakeSimple } from "react-icons/fa6";
 
 const ContactForm = () => {
   const {
@@ -18,7 +20,8 @@ const ContactForm = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
 
-  const accessKey = process.env.PUBLIC_ACCESS_KEY || "88c969e4-ac09-4eb8-b483-9f6a275eebe2";
+  const accessKey =
+    process.env.PUBLIC_ACCESS_KEY || "88c969e4-ac09-4eb8-b483-9f6a275eebe2";
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: accessKey,
@@ -40,13 +43,10 @@ const ContactForm = () => {
   return (
     <div className="order-8 col-span-2 lg:order-7 xl:order-3 lg:col-span-2 xl:col-span-1 xl:row-span-3 max-h-svh">
       <div className="flex flex-col rounded-xl border-2 border-neutral-200/20 lg:h-full py-5 p-2 md:p-10 xl:p-5 space-y-4 bg-neutral-800 overflow-hidden">
-        <h1 className="text-neutral-100 md:text-lg xl:text-base">
-          You have ideas ? <br />
-          I have skills <br />
-          <span className="text-4xl font-black w-full text-green-500">
-            Let's Collaborate!
-          </span>
-        </h1>
+        <Heading text={"I have skills"} icon={<FaHandshakeSimple color="#22c55e" />} />
+        <span className="text-4xl text-center font-black w-full text-green-500">
+          Let's Collaborate!
+        </span>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col font-bold space-y-3"
@@ -59,7 +59,7 @@ const ContactForm = () => {
             })}
             placeholder="Your name"
             autoComplete="false"
-            className={`bg-neutral rounded-xl outline-none p-2 placeholder:text-neutral-400 w-full border 
+            className={`bg-neutral rounded-xl outline-none p-3 xl:p-2 placeholder:text-neutral-400 w-full border 
               ${
                 errors.name
                   ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
@@ -67,7 +67,7 @@ const ContactForm = () => {
               }`}
           />
           {errors.name && (
-              <span className="text-sm text-red-500">{errors.name.message}</span>
+            <span className="text-sm text-red-500">{errors.name.message}</span>
           )}
 
           <input
@@ -80,7 +80,7 @@ const ContactForm = () => {
               },
             })}
             placeholder="yourcompany@email.com"
-            className={`bg-white rounded-xl outline-none p-2 placeholder:text-neutral-400 w-full border 
+            className={`bg-white rounded-xl outline-none p-3 xl:p-2 placeholder:text-neutral-400 w-full border 
               ${
                 errors.email
                   ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
@@ -89,14 +89,14 @@ const ContactForm = () => {
               `}
           />
           {errors.email && (
-              <span className="text-sm text-red-500">{errors.email.message}</span>
+            <span className="text-sm text-red-500">{errors.email.message}</span>
           )}
 
           <textarea
             {...register("message", { required: true })}
             rows={3}
             placeholder="Let me know your ideas"
-            className="p-2 rounded-xl placeholder:text-neutral-400 outline-none"
+            className="p-3 xl:p-2 rounded-xl placeholder:text-neutral-400 outline-none"
           ></textarea>
 
           <button
@@ -133,7 +133,7 @@ const ContactForm = () => {
         </form>
         {isSubmitSuccessful && isSuccess && (
           <div className="mt-3 text-sm text-center text-green-500">
-           Thanks you! I glad of your email.
+            Thanks you! I glad of your email.
           </div>
         )}
         {isSubmitSuccessful && !isSuccess && (
