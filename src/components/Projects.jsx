@@ -46,7 +46,7 @@ const Projects = () => {
   };
   return (
     <div className="order-4 col-span-2 row-span-2 md:order-5 xl:order-1 lg:col-span-2 lg:row-span-2 xl:col-span-1 xl:row-span-3">
-      <div className="bg-neutral-800 rounded-xl border-2 border-neutral-200/20 text-neutral-50 px-2 py-5 md:p-10 xl:p-5 flex flex-col space-y-4 h-full">
+      <div className="bg-neutral-800 rounded-xl border-2 border-neutral-200/20 text-neutral-50 px-2 py-5 md:p-10 xl:p-4 flex flex-col space-y-4 h-full">
         <Heading
           text={"Personal projects"}
           icon={<FaLaptopCode color="#22c55e" />}
