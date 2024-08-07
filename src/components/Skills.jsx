@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   SiAxios,
   SiJavascript,
@@ -18,6 +18,7 @@ import {
 } from "react-icons/fa6";
 import { IoIosRocket } from "react-icons/io";
 import Heading from "./Heading";
+import "./Marquee.css";
 const SkillItem = () => {
   const skills = [
     {
@@ -41,6 +42,7 @@ const SkillItem = () => {
       icons: [<SiMongodb />, <SiAxios />],
     },
   ];
+
   return (
     <div className="order-3 col-span-2 md:col-span-1  lg:col-span-2 lg:row-span-1 xl:order-4 xl:col-span-1 xl:row-span-2">
       <div className="w-full flex flex-col h-full bg-neutral-800 overflow-hidden py-5 px-2 md:p-10 xl:p-5 space-y-4 border-2 border-neutral-200/20 rounded-xl">
@@ -54,7 +56,6 @@ const SkillItem = () => {
               <div className="text-wrap">
                 <h2 className="font-bold text-neutral-50 text-base md:text-lg xl:text-base">
                   {skill.title}
-                  
                 </h2>
               </div>
               <ul className="flex flex-wrap gap-1 w-full">
@@ -67,6 +68,20 @@ const SkillItem = () => {
                   </li>
                 ))}
               </ul>
+              {/* <div className="marquee">
+                <div className="marquee-content">
+                  {skill.icons.map((icon, i) => (
+                    <div key={i} className="marquee-item  text-neutral-50 ">
+                      {icon}
+                    </div>
+                  ))}
+                  {skill.icons.map((icon, i) => (
+                    <div key={i} className="marquee-item  text-neutral-50 ">
+                      {icon}
+                    </div>
+                  ))}
+                </div>
+              </div> */}
             </div>
           ))}
         </div>

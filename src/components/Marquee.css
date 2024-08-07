@@ -1,0 +1,14 @@
+@keyframes marquee {
+  to {
+    transform: translateX(-100%);
+  }
+}
+.marquee {
+  overflow: hidden;
+}
+.marquee-content {
+  display: flex;
+  animation: marquee 5s infinite linear;
+  gap: 10px;
+}
+

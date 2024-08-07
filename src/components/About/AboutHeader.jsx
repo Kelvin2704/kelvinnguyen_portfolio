@@ -13,9 +13,13 @@ const AboutHeader = () => {
       </div>
       <div className="flex items-center justify-center gap-2 text-green-500">
         Resume{" "}
-        <div className="border-2 border-neutral-200/20 bg-neutral-700 size-10 flex justify-center items-center rounded-xl  ">
+        <a
+          href="Phuoc Loc Nguyen Resume.pdf"
+          download="PhuocLocNguyen_Resume.pdf"
+          className="border-2 border-neutral-200/20 bg-neutral-700 size-10 flex justify-center items-center rounded-xl  "
+        >
           <FaDownload className="animate-bounce text-green-50" />
-        </div>
+        </a>
       </div>
     </div>
   );
