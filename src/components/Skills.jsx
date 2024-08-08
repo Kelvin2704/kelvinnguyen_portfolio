@@ -18,7 +18,6 @@ import {
 } from "react-icons/fa6";
 import { IoIosRocket } from "react-icons/io";
 import Heading from "./Heading";
-import "./Marquee.css";
 const SkillItem = () => {
   const skills = [
     {
@@ -45,7 +44,7 @@ const SkillItem = () => {
 
   return (
     <div className="order-3 col-span-2 md:col-span-1  lg:col-span-2 lg:row-span-1 xl:order-4 xl:col-span-1 xl:row-span-2">
-      <div className="w-full flex flex-col h-full bg-neutral-800 overflow-hidden py-5 px-2 md:p-10 xl:p-4 space-y-4 border-2 border-neutral-200/20 rounded-xl">
+      <div className="w-full flex flex-col h-full bg-neutral-800 overflow-hidden py-5 px-2 md:p-10 xl:p-4 space-y-4 xl:space-y-2 border-2 border-neutral-200/20 rounded-xl">
         <Heading
           text={"What I can do"}
           icon={<IoIosRocket color="#22c55e" />}
@@ -62,26 +61,13 @@ const SkillItem = () => {
                 {skill.icons.map((icon, i) => (
                   <li
                     key={i}
-                    className="size-9 rounded-xl border flex items-center justify-center bg-neutral-50"
+                    className="size-9 rounded-xl border flex items-center justify-center bg-neutral-50 text-xl"
                   >
                     {icon}
                   </li>
                 ))}
               </ul>
-              {/* <div className="marquee">
-                <div className="marquee-content">
-                  {skill.icons.map((icon, i) => (
-                    <div key={i} className="marquee-item  text-neutral-50 ">
-                      {icon}
-                    </div>
-                  ))}
-                  {skill.icons.map((icon, i) => (
-                    <div key={i} className="marquee-item  text-neutral-50 ">
-                      {icon}
-                    </div>
-                  ))}
-                </div>
-              </div> */}
+              
             </div>
           ))}
         </div>

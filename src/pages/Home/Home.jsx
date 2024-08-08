@@ -5,7 +5,7 @@ import SkillItem from "../../components/Skills";
 import Projects from "../../components/Projects";
 import Social from "../../components/Social";
 import Experiences from "../../components/Experiences";
-import Marquee from "../../components/Marquee";
+
 
 const Home = () => {
   const items = [
@@ -26,9 +26,6 @@ const Home = () => {
         <ContactForm />
         <Social />
         <SkillItem />
-      </div>
-      <div className="text-neutral-50">
-        <Marquee items={items}/>
       </div>
     </main>
   );
