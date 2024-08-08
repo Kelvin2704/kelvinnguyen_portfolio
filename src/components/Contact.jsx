@@ -41,7 +41,7 @@ const ContactForm = () => {
     },
   });
   return (
-    <div className="order-8 col-span-2 lg:order-7 xl:order-3 lg:col-span-2 xl:col-span-1 xl:row-span-3 max-h-svh">
+    <div className="order-8 col-span-2 lg:order-7 xl:order-5 lg:col-span-2 xl:col-span-1 xl:row-span-3 h-full">
       <div className="flex flex-col rounded-xl border-2 border-neutral-200/20 lg:h-full py-5 p-2 md:p-10 xl:p-4 space-y-4 xl:space-y-2 bg-neutral-800 overflow-hidden">
         <Heading text={"I have skills"} icon={<FaHandshakeSimple color="#22c55e" />} />
         <span className="text-4xl text-center font-black w-full text-green-500">
@@ -49,7 +49,7 @@ const ContactForm = () => {
         </span>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col font-bold space-y-3"
+          className="h-full flex flex-col font-bold space-y-3"
         >
           <input
             type="text"

@@ -20,7 +20,7 @@ const Social = () => {
     },
   ];
   return (
-    <div className="order-5 col-span-2 md:col-span-1 md:order-4 lg:order-6 xl:order-5 lg:col-span-2 xl:col-span-1 xl:row-span-2  bg-neutral-800 rounded-xl h-full border-2 border-neutral-200/20">
+    <div className="order-5 col-span-2 md:col-span-1 md:order-4 lg:order-6 xl:order-3 lg:col-span-2 xl:col-span-1 xl:row-span-2  bg-neutral-800 rounded-xl h-full border-2 border-neutral-200/20">
       <div className="w-full h-full flex flex-col py-5 p-2 md:p-10 xl:p-4 space-y-4 xl:space-y-2">
         <Heading text={"Follow me"} icon={<IoSunny color="#22c55e" />} />
         <h1 className="text-4xl font-black text-green-500 w-full text-center">

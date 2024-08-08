@@ -15,7 +15,7 @@ const AboutDemo = () => {
     loop: 3,
   });
   return (
-    <div className="order-1 w-full h-[80vh] col-span-2 lg:col-span-4 lg:row-span-2 xl:order-4 xl:col-span-2 md:h-[90vh] lg:h-full xl:row-span-3">
+    <div className="order-1 w-full h-[80vh] col-span-2 lg:col-span-4 lg:row-span-2 xl:order-4 xl:col-span-2 md:h-[90vh] lg:h-full xl:row-span-4">
       <div className="relative flex flex-col items-center justify-center bg-neutral-900 w-full h-full py-5 p-2 md:p-10 xl:p-5 overflow-hidden rounded-xl border-2 border-neutral-200/20">
         {/* content */}
         <div className="about-wrapper w-full h-full flex flex-col z-30">
